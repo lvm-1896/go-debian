@@ -129,7 +129,6 @@ func toDecimal(input []byte) (int64, error) {
 // | 40      8       File mode                    Octal
 // | 48      10      File size in bytes           Decimal
 // | 58      2       File magic                   0x60 0x0A
-//
 func parseArEntry(line []byte) (*ArEntry, error) {
 	if len(line) != 60 {
 		return nil, fmt.Errorf("Malformed file entry line length")
